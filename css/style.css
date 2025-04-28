@@ -1,0 +1,373 @@
+/* Basic Reset & Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Choose a clean font */
+    line-height: 1.6;
+    color: #333; /* Default text color */
+    background-color: #fff; /* Default background */
+}
+
+.container {
+    max-width: 1200px; /* Max width of content */
+    margin: 0 auto; /* Center content */
+    padding: 0 20px; /* Padding on sides */
+}
+
+img {
+    max-width: 100%; /* Make images responsive */
+    display: block;
+}
+
+a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #007bff; /* Example link color */
+}
+
+ul {
+    list-style: none; /* Remove bullet points */
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 15px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.site-header .container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out logo, nav, icons */
+    align-items: center; /* Vertically center items */
+}
+
+.site-header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.main-nav ul {
+    display: flex; /* Align nav items horizontally */
+}
+
+.main-nav ul li {
+    margin-left: 20px; /* Spacing between nav items */
+}
+
+.main-nav ul li a {
+    color: #555;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Style for active page */
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.header-icons span {
+    margin-left: 15px; /* Spacing between icons */
+    cursor: pointer; /* Indicate they are clickable */
+    color: #555;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text */
+    padding: 80px 0; /* Vertical padding */
+    text-align: center;
+    background-image: url('../images/hero-banner.jpg'); /* Add a background image later */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Grey button */
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-outline {
+     background-color: transparent;
+     color: #fff; /* Adjust color based on background */
+     border: 2px solid #fff; /* Adjust color */
+}
+.btn-outline:hover {
+     background-color: #fff; /* Adjust color */
+     color: #333; /* Adjust color */
+}
+
+
+/* Featured Products / Product Grid */
+.featured-products, .product-listing {
+    padding: 60px 0;
+}
+
+.featured-products h2, .product-listing h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.product-grid {
+    display: grid;
+    /* Creates responsive columns: fits as many 250px columns as possible, each taking up equal space */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Spacing between grid items */
+}
+
+/* Adjust grid for larger product listing page */
+.product-grid.large-grid {
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly larger cards */
+}
+
+
+.product-card {
+    border: 1px solid #eee;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.product-image {
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image nicely */
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+/* Promo Section */
+.promo-section {
+     background-color: #e9ecef; /* Light grey background */
+     padding: 60px 0;
+     text-align: center;
+}
+.promo-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+.promo-section p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #555;
+}
+.promo-section .btn-outline {
+    color: #333; /* Adjust outline button for light background */
+    border-color: #333;
+}
+.promo-section .btn-outline:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: #343a40; /* Dark footer */
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 60px; /* Space above footer */
+}
+
+.site-footer .container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center;
+}
+
+.footer-links ul {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    color: #adb5bd; /* Light grey link color */
+}
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media span {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #adb5bd;
+}
+
+/* Product Listing Page Specific Styles */
+.filter-sort-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-sort-controls button,
+.filter-sort-controls select {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Add this at the end of style.css */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Tablet and smaller */
+
+    .site-header .container {
+        flex-direction: column; /* Stack header items */
+    }
+
+    .main-nav ul {
+        margin-top: 15px;
+        justify-content: center; /* Center nav items */
+        flex-wrap: wrap; /* Allow nav items to wrap */
+    }
+     .main-nav ul li {
+        margin: 5px 10px; /* Adjust spacing */
+    }
+
+
+    .header-icons {
+        margin-top: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .product-grid {
+        /* Adjust grid for smaller screens, maybe 2 columns */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+     .product-grid.large-grid {
+         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     }
+
+     .product-image {
+        height: 250px; /* Adjust image height */
+    }
+
+
+    .filter-sort-controls {
+        flex-direction: column;
+        align-items: stretch; /* Make controls full width */
+    }
+    .filter-sort-controls button,
+    .filter-sort-controls select {
+        margin-bottom: 10px;
+         width: 100%;
+         text-align: center;
+    }
+
+
+    .footer-links ul {
+        flex-direction: column; /* Stack footer links */
+        align-items: center;
+    }
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile specific */
+
+    .product-grid {
+        /* Maybe force 1 column on very small screens */
+        grid-template-columns: 1fr;
+    }
+     .product-image {
+        height: 280px; /* Adjust image height */
+    }
+
+     .site-header .logo h1 {
+        font-size: 1.5em;
+    }
+     .main-nav ul li a {
+        font-size: 0.9em;
+    }
+
+     .hero {
+        padding: 50px 0;
+     }
+}
